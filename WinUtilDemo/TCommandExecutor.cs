@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WinUtil;
 
-namespace ConsoleApp
+namespace WinUtilDemo
 {
     public class TCommandExecutor
     {

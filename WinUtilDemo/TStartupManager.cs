@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using WinUtil;
 
-namespace ConsoleApp
+namespace WinUtilDemo
 {
     public class TStartupManager
     {
