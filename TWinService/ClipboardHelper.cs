@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace TWinService
 {
-    //这个类需要放在GUI项目中
+    //这个类需要放在GUI项目中..net-windows才能引用System.Windows.Forms.dll
     public static class ClipboardHelper
     {
         private const int RetryCount = 5;
@@ -115,7 +115,7 @@ namespace TWinService
     {
         public static void Test()
         {
-            Clipboard.SetText("Hello"); 
+            Clipboard.SetText("Hello");
             string text = ClipboardHelper.GetText();
             ClipboardHelper.Clear();
         }

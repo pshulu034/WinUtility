@@ -3,7 +3,7 @@ using WinUtil;
 
 namespace TWinService
 {
-    public class TLocalUserGroupManager
+    public class TUserManager
     {
         public static void Test()
         {

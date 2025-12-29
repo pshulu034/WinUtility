@@ -12,6 +12,6 @@ internal static class Program
     static void Main()
     {
         int port = 8080;
-        TLocalUserGroupManager.Test();
+        TUserManager.Test();
     }
 }
