@@ -1,4 +1,4 @@
-﻿namespace WinUtility;
+﻿namespace WinUtil;
 
 using System;
 using System.Linq;

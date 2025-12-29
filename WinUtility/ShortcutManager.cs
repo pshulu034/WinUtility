@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace WinUtility
+namespace WinUtil
 {
     public class ShortcutManager
     {
@@ -32,19 +32,19 @@ namespace WinUtility
 
         public string CreateDesktopShortcut(string name, string targetPath, string? arguments = null, string? iconPath = null)
         {
-            var path = Path.Combine(PathEx.Desktop(), name + ".lnk");
+            var path = Path.Combine(PathHelper.Desktop(), name + ".lnk");
             return CreateShortcut(path, targetPath, arguments, Path.GetDirectoryName(targetPath), iconPath, name);
         }
 
         public bool DeleteDesktopShortcut(string name)
         {
-            var path = Path.Combine(PathEx.Desktop(), name + ".lnk");
+            var path = Path.Combine(PathHelper.Desktop(), name + ".lnk");
             return DeleteShortcut(path);
         }
 
         public string CreateStartMenuShortcut(string name, string targetPath, bool allUsers = false, string? arguments = null, string? iconPath = null)
         {
-            var baseDir = allUsers ? PathEx.StartMenuAllUsers() : PathEx.StartMenuCurrentUser();
+            var baseDir = allUsers ? PathHelper.StartMenuAllUsers() : PathHelper.StartMenuCurrentUser();
             var programs = Path.Combine(baseDir, "Programs");
             var path = Path.Combine(programs, name + ".lnk");
             return CreateShortcut(path, targetPath, arguments, Path.GetDirectoryName(targetPath), iconPath, name);
@@ -52,7 +52,7 @@ namespace WinUtility
 
         public bool DeleteStartMenuShortcut(string name, bool allUsers = false)
         {
-            var baseDir = allUsers ? PathEx.StartMenuAllUsers() : PathEx.StartMenuCurrentUser();
+            var baseDir = allUsers ? PathHelper.StartMenuAllUsers() : PathHelper.StartMenuCurrentUser();
             var programs = Path.Combine(baseDir, "Programs");
             var path = Path.Combine(programs, name + ".lnk");
             return DeleteShortcut(path);

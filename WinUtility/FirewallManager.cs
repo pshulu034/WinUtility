@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using WinUtility;
+using WinUtil;
 
-namespace WinUtility
+namespace WinUtil
 {
     public class FirewallManager
     {

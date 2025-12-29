@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinUtility
+namespace WinUtil
 {
     /// <summary>
     /// Windows 进程管理器
@@ -333,5 +333,54 @@ namespace WinUtility
                 return null;
             }
         }
+
+        #region 查询被端口占用的进程
+        // 使用 netstat 查询端口占用
+        public static string FindProcessByPortWithNetstat(int port)
+        {
+            try
+            {
+                // 获取 netstat 输出
+                var processInfo = RunNetstatCommand(port);
+                if (string.IsNullOrEmpty(processInfo))
+                {
+                    return $"端口 {port} 没有被占用.";
+                }
+                return processInfo;
+            }
+            catch (Exception ex)
+            {
+                return $"查询失败: {ex.Message}";
+            }
+        }
+
+        // 执行 netstat 命令并过滤出相关端口信息
+        private static string RunNetstatCommand(int port)
+        {
+            var process = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = "netstat",
+                    Arguments = $"-ano | findstr :{port}",  // 使用 findstr 筛选特定端口的连接
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                }
+            };
+
+            process.Start();
+            string output = process.StandardOutput.ReadToEnd();
+            process.WaitForExit();
+
+            // 如果有输出则返回
+            if (!string.IsNullOrEmpty(output))
+            {
+                return $"端口 {port} 被以下进程占用：\n{output}";
+            }
+
+            return string.Empty;
+        }
+        #endregion
     }
 }

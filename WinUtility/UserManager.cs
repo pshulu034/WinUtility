@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WinUtility
+namespace WinUtil
 {
-    public class LocalUserGroupManager
+    public class UserManager
     {
         public class LocalUserInfo
         {

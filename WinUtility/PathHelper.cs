@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace WinUtility
+namespace WinUtil
 {
-    public static class PathEx
+    public static class PathHelper
     {
         #region ϵͳĿ¼
         //C:\WINDOWS\system32

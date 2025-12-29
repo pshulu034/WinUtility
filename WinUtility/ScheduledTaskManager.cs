@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace WinUtility
+namespace WinUtil
 {
     public class ScheduledTaskManager
     {

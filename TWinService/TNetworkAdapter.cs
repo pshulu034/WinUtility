@@ -1,5 +1,5 @@
 using System;
-using WinUtility;
+using WinUtil;
 
 namespace TWinService
 {

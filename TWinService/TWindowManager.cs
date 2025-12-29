@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using WinUtility;
+using WinUtil;
 
 namespace TWinService
 {

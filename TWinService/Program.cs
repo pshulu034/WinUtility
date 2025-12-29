@@ -1,7 +1,7 @@
 ﻿using ConsoleApp;
 using TWinService;
 using WinService;
-using WinUtility;
+using WinUtil;
 
 internal static class Program
 {

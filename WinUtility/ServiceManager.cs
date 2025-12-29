@@ -6,9 +6,9 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
-using static WinUtility.RegistryManager;
+using static WinUtil.RegistryManager;
 
-namespace WinUtility
+namespace WinUtil
 {
     /// <summary>
     /// Windows 服务管理封装：

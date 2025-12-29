@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using WinUtility;
+using WinUtil;
 
 namespace TWinService
 {

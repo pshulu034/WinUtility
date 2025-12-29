@@ -1,5 +1,5 @@
 using System;
-using WinUtility;
+using WinUtil;
 
 namespace TWinService
 {
@@ -7,7 +7,7 @@ namespace TWinService
     {
         public static void Test()
         {
-            var mgr = new LocalUserGroupManager();
+            var mgr = new UserManager();
             string user = "DemoUser123";
             string pwd = "P@ssw0rd!";
             var created = mgr.CreateUser(user, pwd, active: true, passwordNeverExpires: true, comment: "Demo");

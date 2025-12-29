@@ -1,6 +1,6 @@
 using System;
 
-namespace WinUtility
+namespace WinUtil
 {
     public class PowerManager
     {

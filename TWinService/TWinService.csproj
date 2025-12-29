@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WinUtility\WinService.csproj" />
+    <ProjectReference Include="..\WinUtility\WinUtil.csproj" />
   </ItemGroup>
 
   <ItemGroup>

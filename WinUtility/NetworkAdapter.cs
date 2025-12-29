@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 
-namespace WinUtility
+namespace WinUtil
 {
     public class NetworkAdapter
     {

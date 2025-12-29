@@ -5,9 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static WinUtility.RegistryManager;
+using static WinUtil.RegistryManager;
 
-namespace WinUtility
+namespace WinUtil
 {
     /// <summary>
     /// Windows 注册表读写封装

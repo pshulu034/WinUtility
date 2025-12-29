@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Text;
 
-namespace WinUtility
+namespace WinUtil
 {
     /// <summary>
     /// Windows命令行执行器

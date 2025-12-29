@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using WinUtility;
+using WinUtil;
 
 namespace TWinService
 {
